@@ -1,1 +1,0 @@
-# yourmind_frontend
