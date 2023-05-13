@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Mainpage from './pages/Mainpage';
 import Join from './pages/Join';
@@ -11,7 +11,9 @@ import Start from './pages/Start';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Start/>
+    <BrowserRouter>
+      <Mainpage/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

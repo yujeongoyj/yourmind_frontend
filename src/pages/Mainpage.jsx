@@ -2,6 +2,9 @@ import LoginImg from "../img/login.png"
 import React from 'react';
 import Chart from 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
+import { Link, NavLink, Route, Routes } from "react-router-dom";
+import Detail from "./Detail";
+import Start from "./Start";
 
 let member = {
     name : "minify",
@@ -60,15 +63,27 @@ const parsedData2 = JSON.parse(datadayJson)
 const Mainpage = () => {
     return(
         <div>
+          <NavLink to = "/Login">
             <img src = {LoginImg} width="50px"></img><br/>
-            이름 : {parsedData1.name}<br/>
-            나이 : {parsedData1.age}<br/>
-            상태 메시지 : {parsedData1.now}<br/><br/>
-            상담 기록 : <br/>
+          </NavLink>
+          이름 : {parsedData1.name}<br/>
+          나이 : {parsedData1.age}<br/>
+          상태 메시지 : {parsedData1.now}<br/><br/>
+          상담 기록 : <br/>
+          <NavLink to = "/detail">
             {parsedData2.one}<br/>
+          </NavLink>
+          <NavLink to = "/detail">
             {parsedData2.two}<br/>
-            {parsedData2.three}
-            <Bar type="Bar" data={chart}/>
+          </NavLink>
+          <NavLink to = "/detail">
+            {parsedData2.three}<br/>
+          </NavLink>
+          <Bar type="Bar" data={chart}/>
+          <Routes>
+            <Route path = "/detail" element = {<Detail/>}></Route>
+            <Route path = "/Login" element = {<Start/>}></Route>
+          </Routes>
         </div>
     )
 }
