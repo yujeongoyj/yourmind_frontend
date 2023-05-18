@@ -1,9 +1,11 @@
 // import '../css/Login.css';
-// import {Route} from "react-router-dom";
+import {Route} from "react-router-dom";
+
+import './Start.css';
 
 const Start = () => {
     return(
-        <div>
+        <div id box1>
             {/* <div id="LogInImg">
                 <img id="LogInImg" src={그림1}/>
             </div> */}
@@ -21,4 +23,6 @@ const Start = () => {
     )
 }
 
+
 export default Start;
+
