@@ -25,7 +25,7 @@ const navigate = useNavigate();
     datasets: [
       {
         label: "공포",
-        // data: [2, 12, 12, 12, 60],
+        data: [2, 12, 12, 12, 60],
         borderWidth: 1,
       },
       {
@@ -60,7 +60,19 @@ const navigate = useNavigate();
       },
     ],
   };
-
+  const options = {
+    // responsive 속성을 false로 지정한다.
+    responsive: false,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  };
   const datadayJson = JSON.stringify(dataday);
   const parsedData2 = JSON.parse(datadayJson);
 
@@ -78,7 +90,7 @@ const navigate = useNavigate();
       {parsedData2.two}
       <br />
       {parsedData2.three}<br/>
-      <Bar type="Bar" data={chart} />
+      <Bar type="Bar" data={chart}  options={options} style={{ position: "relative", height: "200px" }}/>
       <button
           onClick={() => {
             window.localStorage.removeItem("loginId");

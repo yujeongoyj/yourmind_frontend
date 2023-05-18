@@ -17,6 +17,19 @@ let chart =  {
     },
 ],
 }
+const options = {
+  // responsive 속성을 false로 지정한다.
+  responsive: false,
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+};
 function Detail  ()  {
 const user1 = window.localStorage.getItem("JoinName")
 const user2 = window.localStorage.getItem("User2Id")
@@ -33,7 +46,7 @@ const navigate = useNavigate();
             상담 대상자 : {user2}<br/>
             날짜 : {parsedData.date}<br/>
             상담 내용 : {parsedData.messege}<br/>
-            <PolarArea type = "PolarArea" data={chart}/>
+            <PolarArea type = "PolarArea" data={chart}  options={options} style={{ position: "relative", height: "200px" }}/>
             <button onClick={navigateToPurchase1}>뒤로가기</button>
         </div>
     )
