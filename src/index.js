@@ -7,12 +7,13 @@ import Join from "./Join";
 import JoinOk from "./JoinOk";
 import Main from "./Main";
 import Login from "./Login";
+import Character from "./character";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App />
+            <App/>
         </BrowserRouter>
     </React.StrictMode>
 );

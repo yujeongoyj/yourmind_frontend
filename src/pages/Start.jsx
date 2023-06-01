@@ -18,7 +18,7 @@ const Start = () => {
                 <button id="FindPassword" type="submit">비밀번호 찾기</button>
                 <button id="Member" type="submit">회원가입 하기</button>
             </form>
-
+            
         </div>
     )
 }
