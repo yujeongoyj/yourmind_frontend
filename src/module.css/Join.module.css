@@ -1,0 +1,51 @@
+.detail {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d5ecfc;
+    width: 400;
+    height: 600;
+
+  }
+  
+  .detail > div {
+    margin-bottom: 10px;
+  }
+  
+  .detail input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .detail input[type="text"],
+  .detail input[type="password"] {
+    width: 200px;
+  }
+  
+  .detail input[type="text"]:focus,
+  .detail input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .detail label {
+    font-weight: bold;
+  }
+
+
+  .join {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  
