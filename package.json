@@ -15,8 +15,8 @@
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.0-rc.1",
     "web-vitals": "^2.1.4"
-    
-  },"proxy": "http://localhost:8080/Api",
+  },
+  "proxy": "http://localhost:8080/Api",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
