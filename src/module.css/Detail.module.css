@@ -60,7 +60,9 @@
   }
   
   
+  b > .solution {
+    font-size: larger;
+    font-weight: lighter;
+  }
   
-  
- 
   
