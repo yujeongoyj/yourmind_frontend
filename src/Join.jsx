@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import JoinOk from "./JoinOk";
-import Styles from './module.css/Join.module.css'
-
+import Styles from './module.css/Join.module.css';
 
 function Join() {
   let [JoinName, setJoinName] = useState("");
