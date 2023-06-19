@@ -43,22 +43,31 @@ const navigate = useNavigate();
 
     return(
       <div className={styles.container}>
+    
       <h1 className={styles.header}>상담 정보</h1>
       <div className={styles.content}>
+        
         <p>내담자: {user1}</p>
         <p>상담사: {user2}</p>
         <p>날짜: {parsedData.date}</p>
         <p>상담 내용: {parsedData.messege}</p>
-        <PolarArea className= {styles.chartView}
+        </div>
+      
+        <div className={styles.chartView}>
+        <div className={styles.chartWrapper}>
+        <PolarArea
           type="PolarArea"
           data={chart}
           options={options}
-          style={{ position: 'center',height: '400px' }}
+          style={{ width: '700px', height: '500px' }}
+          //className={styles.chart}
         />
+        </div>
+        </div>
         <button className={styles.button} onClick={navigateToPurchase1}>
           뒤로가기
         </button>
-      </div>
+      
     </div>
     )
 }

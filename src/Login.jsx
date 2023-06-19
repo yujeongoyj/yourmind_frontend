@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import styles from './module.css/Join.module.css';
+import styles from './module.css/Login.module.css';
 
 function Login() {
   const [loginId, setLoginId] = useState("");
