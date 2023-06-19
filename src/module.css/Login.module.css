@@ -1,0 +1,43 @@
+
+
+
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .start > div {
+    margin-bottom: 10px;
+  }
+  
+  .start input[type="text"],
+  .start input[type="password"] {
+    width: 200px;
+    padding: 5px;
+  }
+  
+  .start button   {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start button:hover {
+    background-color: #0056b3;
+  }
+  
+  .loginBox {
+    background-color: none;
+  
+  }
+  

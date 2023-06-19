@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import Styles from './module.css/Join.module.css';
 
 function Login() {
   let [loginId, setLoginId] = useState("");

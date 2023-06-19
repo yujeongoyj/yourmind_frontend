@@ -2,6 +2,7 @@ import React from 'react';
 import Chart from 'chart.js/auto';
 import { PolarArea } from 'react-chartjs-2';
 import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import  Styles  from './module.css/Detail.module.css'
 
 let consulting = {
     date : "2022-05-04",
