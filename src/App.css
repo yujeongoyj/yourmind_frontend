@@ -1,5 +1,10 @@
 .App {
+  width: 1706px;
+  height: 923px;
   text-align: center;
+  background-image: url(../src/img/6157e129611d49a\ \(1\).jpg);
+  background-size: 'cover';
+
 }
 
 .App-logo {
@@ -39,3 +44,5 @@
 .chart{
   width: 50px;
 }
+
+

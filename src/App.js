@@ -9,7 +9,7 @@ import Detail from './Detail';
 
 function App() {
   return (
-    <>      
+    <div className='App'>      
     <Routes>
       <Route path="/" element={<Login />}></Route>
       <Route path="/Main" element={<Main />}></Route>
@@ -17,7 +17,7 @@ function App() {
       <Route path='/JoinOk' element={<JoinOk/>}></Route>
       <Route path='/Detail' element={<Detail/>}></Route>
     </Routes>
-    </>
+    </div>
   );
 }
 

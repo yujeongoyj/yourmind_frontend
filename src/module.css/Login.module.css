@@ -1,4 +1,6 @@
 
+
+  
 .start {
     position: absolute;
     top: 50%;
@@ -9,7 +11,9 @@
     align-items: center;
     justify-content: center;
     
+    
   }
+ 
   
   .start > div {
     margin-bottom: 10px;
@@ -38,4 +42,6 @@
     background-color: none;
   
   }
+
+
   

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import styles from "./module.css/Main.module.css"
 
 function Main() {
   const userName = window.localStorage.getItem("JoinName");
@@ -77,29 +78,33 @@ const navigate = useNavigate();
   const parsedData2 = JSON.parse(datadayJson);
 
   return (
+    <div className={styles.container}>
     <div>
-      이름 : {userName}
+      이름 : <span className={styles.name}>{userName}</span>
       <br />
-      나이 : {userAge}
+      나이 : <span className={styles.age}>{userAge}</span>
       <br />
-      상테 메시지 : {userMessege}
+      상태 메시지 : <span className={styles.message}>{userMessege}</span>
       <br />
       상담 기록 : <br />
       <button onClick={navigateToPurchase1}>{parsedData2.one}</button>
       <br />
       {parsedData2.two}
       <br />
-      {parsedData2.three}<br/>
-      <Bar type="Bar" data={chart}  options={options} style={{ position: "relative", height: "200px" }}/>
-      <button
-          onClick={() => {
-            window.localStorage.removeItem("loginId");
-            window.localStorage.removeItem("loginPassword");
-          }}
-        >
-          <button onClick={navigateToPurchase2}>로그아웃</button>
+      {parsedData2.three}
+      <br />
+      <Bar className={styles.chart} type="Bar" data={chart} options={options} />
+      <div className={styles.logout}>
+        <button onClick={() => {
+          window.localStorage.removeItem("loginId");
+          window.localStorage.removeItem("loginPassword");
+        }}>
+          로그아웃
         </button>
+        {/* <button onClick={navigateToPurchase2}>로그아웃</button> */}
+      </div>
     </div>
+  </div>
   );
 }
 export default Main;
