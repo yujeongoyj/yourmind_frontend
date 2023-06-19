@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link, NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import Styles from './module.css/Join.module.css';
+import styles from './module.css/Join.module.css';
 
 function Login() {
-  let [loginId, setLoginId] = useState("");
-  let [loginPassword, setLoginPassword] = useState("");
-  let [savedLoginId, setSavedLoginId] = useState("");
-  let [savedLoginPassword, setSavedLoginPassword] = useState("");
+  const [loginId, setLoginId] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [savedLoginId, setSavedLoginId] = useState("");
+  const [savedLoginPassword, setSavedLoginPassword] = useState("");
 
   const navigate = useNavigate();
   const navigateToPurchase1 = () => {
@@ -17,7 +17,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className={styles.start}>
       <div>
         ID :{" "}
         <input
@@ -40,7 +40,7 @@ function Login() {
       </div>
 
       <div>
-        <button
+        <button className={styles.loginBox}
           onClick={() => {
             window.localStorage.setItem("loginId", loginId);
             window.localStorage.setItem("loginPassword", loginPassword);
@@ -49,10 +49,10 @@ function Login() {
             setSavedLoginPassword(window.localStorage.getItem("loginPassword"));
           }}
         >
-          <button onClick={navigateToPurchase1}>로그인</button>
-        </button>
+        <button className={styles.loginId} onClick={navigateToPurchase1}>로그인</button>
+        <button className={styles.loginPw} onClick={navigateToPurchase2}>회원가입</button>
+         </button>
         
-        <button onClick={navigateToPurchase2}>회원가입</button>
       </div>
     </div>
   );
